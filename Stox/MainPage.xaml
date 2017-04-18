@@ -7,8 +7,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <CheckBox x:Name="checkBox" Content="CheckBox" HorizontalAlignment="Left" Margin="10,609,0,0" VerticalAlignment="Top" Checked="checkBox_Checked"/>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,234,0,0">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="162,37,149,0" TextWrapping="Wrap" Text="STOX" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFEC0909" FontSize="36" FontWeight="Bold" Width="121" Foreground="#FFE40D0D"/>
+        <CheckBox x:Name="currentPrice" Content="Current Price" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Checked="currentPrice_Checked" IsChecked="True" IsThreeState="True"/>
+        <TextBlock x:Name="currentPriceLabel" HorizontalAlignment="Left" Margin="212,195,0,0" TextWrapping="Wrap" Text="currentPrice" VerticalAlignment="Top" ToolTipService.ToolTip="This is the current price of the stock. "/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="212,130,0,0" TextWrapping="Wrap" Text="MSFT" VerticalAlignment="Top" Height="20" Width="79"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,130,0,0" TextWrapping="Wrap" Text="Enter a stock symbol: " VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

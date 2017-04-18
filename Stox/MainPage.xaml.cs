@@ -27,8 +27,13 @@ namespace Stox
             this.InitializeComponent();
         }
 
-        private void checkBox_Checked(object sender, RoutedEventArgs e)
+        private void currentPrice_Checked(object sender, RoutedEventArgs e)
         {
+            /* Current price of stock that was input. 
+             * If checked this will display the latest market price. 
+             */ 
+
+
         }
     }
 }
