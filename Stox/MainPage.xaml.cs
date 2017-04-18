@@ -32,8 +32,20 @@ namespace Stox
             /* Current price of stock that was input. 
              * If checked this will display the latest market price. 
              */ 
+        }
 
+        private void currentPriceLabel_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            
+        }
 
+        private void startButton_Click(object sender, RoutedEventArgs e)
+        {
+            /* When user presses "Lookup" button fetch the current price
+             * of the ticker symbol, and display it for the user. 
+             */ 
+            SymbolLookup lookup = new SymbolLookup();
+            currentPriceLabel.Text = lookup.currentPrice(tickerSymbol.Text);
         }
     }
 }
