@@ -26,7 +26,7 @@ namespace Stox
                 string jsonData = stockUrl.Result.Content.ReadAsStringAsync().Result;
                 ro = JsonConvert.DeserializeObject<RootObject>(jsonData);                      
             }
-            catch { }
+            catch (Exception e){ return e.ToString(); }
 
             return ro.LastPrice.ToString();
         }
