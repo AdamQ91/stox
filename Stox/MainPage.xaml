@@ -8,13 +8,19 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,234,0,0">
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="170,10,141,0" TextWrapping="Wrap" Text="STOX" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFEC0909" FontSize="36" FontWeight="Bold" Width="121" Foreground="#FFE40D0D"/>
-        <CheckBox x:Name="currentPrice" Content="Current Price" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Checked="currentPrice_Checked" IsChecked="True" IsThreeState="True"/>
-        <TextBlock x:Name="currentPriceLabel" HorizontalAlignment="Left" Margin="212,195,0,0" TextWrapping="Wrap" Text="currentPrice" VerticalAlignment="Top" ToolTipService.ToolTip="This is the current price of the stock. " SelectionChanged="currentPriceLabel_SelectionChanged"/>
-        <TextBox x:Name="tickerSymbol" HorizontalAlignment="Left" Margin="212,130,0,0" TextWrapping="Wrap" Text="MSFT" VerticalAlignment="Top" Height="20" Width="79"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,130,0,0" TextWrapping="Wrap" Text="Enter a stock symbol: " VerticalAlignment="Top"/>
-        <Button x:Name="startButton" Content="Lookup" HorizontalAlignment="Left" Margin="10,306,0,0" VerticalAlignment="Top" Click="startButton_Click" Width="120"/>
-        <Button x:Name="clearButton" Content="Clear" HorizontalAlignment="Left" Margin="303,306,0,0" VerticalAlignment="Top" Width="119"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="222*"/>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="181*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="170,10,141,0" TextWrapping="Wrap" Text="STOX" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFEC0909" FontSize="36" FontWeight="Bold" Width="121" Foreground="#FFE40D0D" Height="48" Grid.ColumnSpan="3"/>
+        <CheckBox x:Name="currentPrice" Content="Current Price" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Checked="currentPrice_Checked" IsChecked="True" IsThreeState="True" Height="32" Width="120"/>
+        <TextBlock x:Name="currentPriceLabel" HorizontalAlignment="Left" Margin="212,195,0,0" TextWrapping="Wrap" Text="currentPrice" VerticalAlignment="Top" ToolTipService.ToolTip="This is the current price of the stock. " SelectionChanged="currentPriceLabel_SelectionChanged" Height="20" Width="101" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="tickerSymbol" HorizontalAlignment="Left" Margin="212,130,0,0" TextWrapping="Wrap" Text="MSFT" VerticalAlignment="Top" Height="32" Width="79" Grid.ColumnSpan="3"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,130,0,0" TextWrapping="Wrap" Text="Enter a stock symbol: " VerticalAlignment="Top" Height="20" Width="140"/>
+        <Button x:Name="startButton" Content="Lookup" HorizontalAlignment="Left" Margin="10,306,0,0" VerticalAlignment="Top" Click="startButton_Click" Width="120" Height="32"/>
+        <Button x:Name="clearButton" Content="Clear" HorizontalAlignment="Left" Margin="51.8,306,0,0" VerticalAlignment="Top" Width="119" Height="32" Grid.Column="2"/>
 
     </Grid>
 </Page>
